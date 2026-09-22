@@ -1,0 +1,8 @@
+{
+  "name": "Remix Paprika Restaurant",
+  "description": "Luxury iOS-inspired dining application for Paprika Restaurant in Rahim Yar Khan, Pakistan featuring translucent liquid glass, crystal depth, authentic photography, interactive menu, reservations, and gallery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -41,7 +41,7 @@ export const LaunchScreen: React.FC<LaunchScreenProps> = ({ onEnter }) => {
         className="relative z-10 flex flex-col items-center justify-center px-6"
       >
         <img
-          src="/paprika-logo.png"
+          src="./paprika-logo.png"
           alt="Paprika Restaurant"
           className="w-52 sm:w-64 md:w-72 h-auto object-contain drop-shadow-[0_15px_35px_rgba(0,0,0,0.85)]"
         />

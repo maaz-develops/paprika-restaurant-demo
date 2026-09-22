@@ -5,13 +5,26 @@ export const RESTAURANT_INFO = {
   tagline: 'Speak With The Taste',
   subLocation: 'Rahim Yar Khan, Pakistan',
   address: '42 Businessman Colony, Sadiq Club Road, Rahim Yar Khan, Punjab, Pakistan',
+
   phoneDisplay: '+92 304 5888899',
-  phoneCallUrl: 'tel:+920304588899',
-  whatsappUrl: 'https://wa.me/923036522333',
-  whatsappDisplay: '+92 303 6522333',
+  phoneCallUrl: 'tel:+923045888899',
+
+  // Verified Paprika phone number used for call CTA.
+  // Do not label this as an officially verified WhatsApp number.
+  whatsappUrl: 'https://wa.me/923045888899',
+  whatsappDisplay: '+92 304 5888899',
+
   officialWebsite: 'https://paprika.pk/',
   hours: 'Daily: 12:00 PM – 01:00 AM',
-  cuisines: ['Continental', 'Barbecue', 'Italian & Pastas', 'Traditional Pakistani', 'Artisan Desserts'],
+
+  cuisines: [
+    'Continental',
+    'Barbecue',
+    'Italian & Pastas',
+    'Traditional Pakistani',
+    'Artisan Desserts'
+  ],
+
   seatingZones: [
     'Main Crystal Dining Hall',
     'Executive Family Sanctuary',
@@ -20,342 +33,563 @@ export const RESTAURANT_INFO = {
   ]
 };
 
+
+// ============================================================
+// OFFICIAL PAPRIKA WEBSITE IMAGE ASSETS
+// ============================================================
+
+const PAPRIKA_IMAGES = {
+  salmon:
+    'https://wp.validthemes.net/restan/wp-content/uploads/2024/05/13-1.jpg',
+
+  prawns:
+    'https://wp.validthemes.net/restan/wp-content/uploads/2024/05/17-1.jpg',
+
+  lobster:
+    'https://wp.validthemes.net/restan/wp-content/uploads/2024/05/16.jpg',
+
+  steak:
+    'https://wp.validthemes.net/restan/wp-content/uploads/2024/05/2-4.jpg',
+
+  fish:
+    'https://wp.validthemes.net/restan/wp-content/uploads/2024/05/14.jpg',
+
+  seafood:
+    'https://wp.validthemes.net/restan/wp-content/uploads/2024/05/18-2.jpg',
+
+  pasta:
+    'https://wp.validthemes.net/restan/wp-content/uploads/2024/05/15-1.jpg',
+
+  tacos:
+    'https://wp.validthemes.net/restan/wp-content/uploads/2024/05/3-3.jpg',
+
+  cupcakes:
+    'https://wp.validthemes.net/restan/wp-content/uploads/2024/05/7-1.jpg',
+
+  pie:
+    'https://wp.validthemes.net/restan/wp-content/uploads/2024/05/11-1.jpg',
+
+  brownie:
+    'https://wp.validthemes.net/restan/wp-content/uploads/2024/05/8.jpg',
+
+  coffee:
+    'https://wp.validthemes.net/restan/wp-content/uploads/2024/05/20-2.jpg',
+
+  chocolate:
+    'https://wp.validthemes.net/restan/wp-content/uploads/2024/05/21-1.jpg',
+
+  burger:
+    'https://wp.validthemes.net/restan/wp-content/uploads/2024/05/6-1.jpg'
+};
+
+
+// ============================================================
+// MENU
+// ============================================================
+
 export const MENU_DISHES: Dish[] = [
+
   // STARTERS
   {
     id: 'starter-1',
-    name: 'Crispy Crustacean Tempura',
+    name: 'Prawns Fry',
     category: 'STARTERS',
-    description: 'Golden fried ocean prawns seasoned with smoked sea salt, served with kaffir lime zest & sweet chili reduction.',
+    description:
+      'Crispy golden prawns prepared for a rich seafood experience.',
     price: 1450,
-    image: '/dish-1.jpg',
-    ingredients: ['King Prawns', 'Japanese Panko', 'Kaffir Lime', 'Paprika Infusion', 'Sweet Chili Coulis'],
-    chefNote: 'Flash-fried at 190°C for exceptional crunch while preserving tender juiciness.',
+    image: PAPRIKA_IMAGES.prawns,
+    ingredients: [
+      'Fresh Prawns',
+      'Seasoning',
+      'Herbs',
+      'Crisp Coating'
+    ],
+    chefNote:
+      'A premium seafood starter inspired by Paprika’s seafood menu.',
     calories: 420,
     preparationTime: '15 mins',
     isChefSpecial: true,
     isPopular: true,
     spiceLevel: 1
   },
+
   {
     id: 'starter-2',
-    name: 'Artisan Jalapeño Cheese Poppers',
+    name: 'Fish Tacos',
     category: 'STARTERS',
-    description: 'Hand-stuffed charred jalapeños with aged mozzarella, cream cheese, herbs, and paprika emulsion.',
+    description:
+      'Freshly prepared fish tacos with colourful vegetables and a vibrant finish.',
     price: 980,
-    image: '/dish-2.jpg',
-    ingredients: ['Fresh Jalapeños', 'Aged Mozzarella', 'Philadelphia Cream Cheese', 'Herb Crust', 'Paprika Mayo'],
-    chefNote: 'Molten center with balanced acidity and a gentle warm kick.',
+    image: PAPRIKA_IMAGES.tacos,
+    ingredients: [
+      'Grilled Fish',
+      'Tortilla',
+      'Fresh Vegetables',
+      'Herbs'
+    ],
+    chefNote:
+      'A contemporary seafood option with a fresh, colourful presentation.',
     calories: 380,
     preparationTime: '12 mins',
     isPopular: true,
     spiceLevel: 2
   },
+
   {
     id: 'starter-3',
-    name: 'Dynamite Chicken Bites',
+    name: 'Crispy Seafood Bites',
     category: 'STARTERS',
-    description: 'Tender chicken bites tossed in our signature secret spicy dynamite glaze with toasted sesame and scallions.',
+    description:
+      'Crispy seafood bites with a rich golden finish and fresh garnish.',
     price: 1150,
-    image: '/dish-3.jpg',
-    ingredients: ['Prime Chicken Breast', 'House Dynamite Sauce', 'Toasted Sesame', 'Spring Onion', 'Crisp Vermicelli'],
-    chefNote: 'An all-time guest favorite in Rahim Yar Khan.',
+    image: PAPRIKA_IMAGES.seafood,
+    ingredients: [
+      'Seafood',
+      'Seasoning',
+      'Fresh Herbs',
+      'Crisp Coating'
+    ],
+    chefNote:
+      'A refined seafood starter designed for sharing.',
     calories: 460,
     preparationTime: '14 mins',
     isPopular: true,
     spiceLevel: 2
   },
 
+
   // MAINS
   {
     id: 'main-1',
-    name: 'Charred Prime Flank Steak',
+    name: 'Grilled Steak',
     category: 'MAINS',
-    description: 'Dry-rubbed prime cut grilled to perfection over charcoal, accompanied by truffle potato purée and peppercorn jus.',
+    description:
+      'A beautifully grilled steak presented with a rich sauce and fresh greens.',
     price: 2850,
-    image: '/dish-4.jpg',
-    ingredients: ['Prime Beef Cut', 'Wild Forest Peppercorns', 'Truffle Butter', 'Smoked Garlic', 'Rosemary'],
-    chefNote: 'Seared on cast iron to lock in natural juices with a rich caramelised crust.',
+    image: PAPRIKA_IMAGES.steak,
+    ingredients: [
+      'Prime Beef',
+      'Herbs',
+      'Pepper Sauce',
+      'Fresh Greens'
+    ],
+    chefNote:
+      'A premium grilled main with a rich caramelised finish.',
     calories: 680,
     preparationTime: '22 mins',
     isChefSpecial: true,
     isPopular: true,
     spiceLevel: 1
   },
+
   {
     id: 'main-2',
-    name: 'Chicken Supreme au Champignon',
+    name: 'Salmon Fry',
     category: 'MAINS',
-    description: 'Pan-roasted tender chicken breast bathed in a velvety forest mushroom cream sauce, served with buttered asparagus.',
-    price: 1850,
-    image: '/dish-5.jpg',
-    ingredients: ['Free-Range Chicken Breast', 'Porcini & Button Mushrooms', 'French Cream', 'Fresh Thyme', 'Parmigiano Reggiano'],
-    chefNote: 'Delicate sauce slow-simmered with reduced white grape broth and fresh herbs.',
+    description:
+      'Golden-seared salmon served with fresh greens for a refined seafood main.',
+    price: 2450,
+    image: PAPRIKA_IMAGES.salmon,
+    ingredients: [
+      'Salmon',
+      'Herbs',
+      'Seasoning',
+      'Fresh Greens'
+    ],
+    chefNote:
+      'One of the seafood items featured on Paprika’s official website.',
     calories: 590,
     preparationTime: '20 mins',
     isChefSpecial: true,
-    isPopular: false,
+    isPopular: true,
     spiceLevel: 0
   },
+
   {
     id: 'main-3',
-    name: 'Traditional Royal Mutton Handi',
+    name: 'Pangasius Basa',
     category: 'MAINS',
-    description: 'Slow-simmered mutton tenderloin cooked in a clay pot with freshly ground spices, roasted tomatoes, and desi ghee.',
+    description:
+      'Tender fish served with a colourful fresh garnish and aromatic seasoning.',
     price: 2450,
-    image: '/dish-6.jpg',
-    ingredients: ['Farm-Fresh Mutton', 'Heirloom Spices', 'Pure Desi Ghee', 'Ginger Batons', 'Coriander Essence'],
-    chefNote: 'Slow cooked for three hours inside earthen cookware for unmatched depth.',
-    calories: 740,
-    preparationTime: '25 mins',
-    isChefSpecial: true,
+    image: PAPRIKA_IMAGES.fish,
+    ingredients: [
+      'Basa Fish',
+      'Fresh Herbs',
+      'Chilli',
+      'Seasoning'
+    ],
+    chefNote:
+      'A seafood option listed on Paprika’s official menu.',
+    calories: 540,
+    preparationTime: '20 mins',
     isPopular: true,
-    spiceLevel: 2
+    spiceLevel: 1
   },
+
 
   // GRILLS
   {
     id: 'grill-1',
-    name: 'Signature Paprika BBQ Platter',
+    name: 'Signature Grill Platter',
     category: 'GRILLS',
-    description: 'Grand charcoal presentation featuring Malai Boti, Reshmi Seekh Kebabs, Smoked Lamb Chops, and Charred Wings.',
+    description:
+      'A premium grilled presentation featuring rich charred flavours and fresh garnish.',
     price: 3850,
-    image: '/dish-7.jpg',
-    ingredients: ['Malai Boti', 'Smoked Lamb Chops', 'Charred Chicken Wings', 'Tandoori Naan', 'Mint Raita'],
-    chefNote: 'Smoked using seasoned sheesham wood for an authentic Punjab barbecue aroma.',
+    image: PAPRIKA_IMAGES.steak,
+    ingredients: [
+      'Grilled Meat',
+      'Herbs',
+      'Seasoning',
+      'Fresh Greens'
+    ],
+    chefNote:
+      'Designed as the centrepiece of a premium dining experience.',
     calories: 920,
     preparationTime: '25 mins',
     isChefSpecial: true,
     isPopular: true,
     spiceLevel: 2
   },
+
   {
     id: 'grill-2',
-    name: 'Char-Grilled Atlantic Salmon',
+    name: 'Char-Grilled Salmon',
     category: 'GRILLS',
-    description: 'Wood-fired salmon fillet brushed with smoked paprika glaze, grilled lemon half, and blistered baby tomatoes.',
+    description:
+      'Rich grilled salmon with a crisp exterior and tender centre.',
     price: 3450,
-    image: '/dish-8.jpg',
-    ingredients: ['Wild Atlantic Salmon', 'Paprika Glaze', 'Meyer Lemon', 'Olive Oil', 'Dill Herb Sauce'],
-    chefNote: 'Crispy skin with silky, buttery pink center.',
+    image: PAPRIKA_IMAGES.salmon,
+    ingredients: [
+      'Salmon',
+      'Lemon',
+      'Herbs',
+      'Seasoning'
+    ],
+    chefNote:
+      'A refined seafood grill inspired by the Salmon Fry listed on Paprika’s website.',
     calories: 520,
     preparationTime: '18 mins',
     isChefSpecial: true,
-    isPopular: false,
+    isPopular: true,
     spiceLevel: 1
   },
+
   {
     id: 'grill-3',
-    name: 'Smoked Reshmi Kebabs',
+    name: 'Prawns Grill',
     category: 'GRILLS',
-    description: 'Melt-in-mouth chicken mince kebabs blended with cream, saffron, roasted cumin, and slow-broiled over hot embers.',
+    description:
+      'Juicy grilled prawns finished with herbs and a rich golden sear.',
     price: 1550,
-    image: '/dish-9.jpg',
-    ingredients: ['Prime Minced Chicken', 'Saffron', 'Double Cream', 'Green Cardamom', 'Charcoal Smoke'],
-    chefNote: 'Delicate texture that melts effortlessly on the palate.',
+    image: PAPRIKA_IMAGES.prawns,
+    ingredients: [
+      'Fresh Prawns',
+      'Herbs',
+      'Seasoning',
+      'Lemon'
+    ],
+    chefNote:
+      'A premium seafood grill for seafood lovers.',
     calories: 480,
     preparationTime: '18 mins',
     isPopular: true,
     spiceLevel: 1
   },
 
+
   // PASTA
   {
     id: 'pasta-1',
-    name: 'Fettuccine Alfredo Paprika',
+    name: 'Chicken Alfredo',
     category: 'PASTA',
-    description: 'Handmade ribbon pasta tossed in 24-month aged Parmigiano Reggiano cream, topped with charred garlic herb chicken.',
+    description:
+      'Creamy pasta with tender chicken and a rich parmesan-style finish.',
     price: 1650,
-    image: '/dish-10.jpg',
-    ingredients: ['Bronze-Die Fettuccine', 'Aged Parmigiano', 'Garlic Confit', 'Fresh Nutmeg', 'Pan-Seared Chicken'],
-    chefNote: 'Silky emulsion made without heavy flour thickeners.',
+    image: PAPRIKA_IMAGES.pasta,
+    ingredients: [
+      'Pasta',
+      'Chicken',
+      'Cream Sauce',
+      'Herbs'
+    ],
+    chefNote:
+      'Chicken Alfredo is listed among the dishes on Paprika’s official website.',
     calories: 630,
     preparationTime: '16 mins',
     isPopular: true,
     spiceLevel: 0
   },
+
   {
     id: 'pasta-2',
-    name: 'Spicy Prawn Tagliatelle',
+    name: 'Seafood Pasta',
     category: 'PASTA',
-    description: 'Pan-seared jumbo prawns with slow-roasted cherry tomatoes, fiery Calabrian chili, garlic, and fresh basil.',
+    description:
+      'Rich seafood pasta with tomato sauce and a vibrant Mediterranean finish.',
     price: 1950,
-    image: '/dish-11.jpg',
-    ingredients: ['Italian Tagliatelle', 'Jumbo Prawns', 'San Marzano Tomatoes', 'Calabrian Chili', 'Extra Virgin Olive Oil'],
-    chefNote: 'Pungent, vibrant and bursting with Mediterranean aroma.',
+    image: PAPRIKA_IMAGES.pasta,
+    ingredients: [
+      'Italian Pasta',
+      'Seafood',
+      'Tomato Sauce',
+      'Herbs'
+    ],
+    chefNote:
+      'A contemporary seafood pasta option.',
     calories: 540,
     preparationTime: '16 mins',
     isChefSpecial: true,
-    isPopular: false,
+    isPopular: true,
     spiceLevel: 2
   },
+
 
   // DESSERTS
   {
     id: 'dessert-1',
-    name: 'Molten Belgian Lava Cake',
+    name: 'Chocolate Brownie',
     category: 'DESSERTS',
-    description: 'Dark Belgian chocolate cake with a warm flowing truffle center, served with artisanal Madagascar vanilla bean gelato.',
+    description:
+      'Rich chocolate brownie with a deep cocoa flavour.',
     price: 1100,
-    image: '/dish-2.jpg',
-    ingredients: ['70% Callebaut Dark Chocolate', 'Pure Butter', 'Vanilla Bean Gelato', 'Berry Coulis', 'Gold Leaf'],
-    chefNote: 'Baked to order for the ultimate liquid chocolate cascade.',
+    image: PAPRIKA_IMAGES.brownie,
+    ingredients: [
+      'Dark Chocolate',
+      'Butter',
+      'Cocoa',
+      'Sugar'
+    ],
+    chefNote:
+      'Chocolate Brownie is listed on Paprika’s official website.',
     calories: 510,
     preparationTime: '15 mins',
     isChefSpecial: true,
     isPopular: true,
     spiceLevel: 0
   },
+
   {
     id: 'dessert-2',
-    name: 'New York Smoked Cheesecake',
+    name: 'Cheesecake',
     category: 'DESSERTS',
-    description: 'Silky baked cheesecake on a spiced graham cracker crust, topped with macerated wild berries and mint.',
+    description:
+      'Silky cheesecake presented as a refined finishing course.',
     price: 950,
-    image: '/dish-5.jpg',
-    ingredients: ['Cream Cheese', 'Graham Crust', 'Wild Blackberry Compote', 'Organic Vanilla', 'Mint Sprig'],
-    chefNote: 'Subtle citrus zest balances rich dairy luxury.',
+    image: PAPRIKA_IMAGES.cupcakes,
+    ingredients: [
+      'Cream Cheese',
+      'Vanilla',
+      'Biscuit Base',
+      'Fresh Topping'
+    ],
+    chefNote:
+      'Cheesecake is listed among Paprika’s official dessert offerings.',
     calories: 430,
     preparationTime: '10 mins',
     isPopular: true,
     spiceLevel: 0
   },
 
+
   // DRINKS
   {
     id: 'drink-1',
-    name: 'Paprika Sunset Refresher',
+    name: 'Hot Chocolate',
     category: 'DRINKS',
-    description: 'Fresh pomegranate extract, pressed Valencia orange, crushed mint, sparkling tonic, and pomegranate pearls.',
+    description:
+      'Smooth hot chocolate with a rich creamy finish.',
     price: 680,
-    image: '/dish-1.jpg',
-    ingredients: ['Pomegranate Reduction', 'Fresh Orange Juice', 'Wild Mint Leaves', 'Sparkling Spring Water', 'Ice Shards'],
-    chefNote: 'Crafted as an invigorating palate cleanser between courses.',
+    image: PAPRIKA_IMAGES.chocolate,
+    ingredients: [
+      'Chocolate',
+      'Milk',
+      'Cream'
+    ],
+    chefNote:
+      'Hot chocolate appears in Paprika’s official popular categories.',
     calories: 140,
     preparationTime: '8 mins',
     isChefSpecial: true,
     isPopular: true,
     spiceLevel: 0
   },
+
   {
     id: 'drink-2',
-    name: 'Mint & Lychee Crystal Mojito',
+    name: 'Americano Coffee',
     category: 'DRINKS',
-    description: 'Muddled garden mint, lychee nectar, sparkling soda, and crystal ice cubes infused with lime zest.',
+    description:
+      'Classic black coffee with a rich roasted aroma.',
     price: 620,
-    image: '/dish-3.jpg',
-    ingredients: ['Fresh Mint', 'Lychee Puree', 'Key Lime', 'Club Soda', 'Cane Sugar Syrup'],
-    chefNote: 'Crisp, aromatic, and deeply refreshing on warm Rahim Yar Khan evenings.',
-    calories: 120,
+    image: PAPRIKA_IMAGES.coffee,
+    ingredients: [
+      'Arabica Coffee',
+      'Filtered Water'
+    ],
+    chefNote:
+      'Americano Coffee is listed on Paprika’s official website.',
+    calories: 20,
     preparationTime: '6 mins',
     isPopular: true,
     spiceLevel: 0
   }
 ];
 
+
+// ============================================================
+// GALLERY
+// ============================================================
+
 export const GALLERY_ITEMS: GalleryItem[] = [
+
   {
     id: 'gal-1',
-    title: 'The Paprika Grand Facade',
-    category: 'exterior',
-    image: '/paprika-hero-exterior.jpg',
-    caption: 'Official exterior view of Paprika Restaurant on Sadiq Club Road, welcoming guests into Rahim Yar Khan’s most prestigious dining venue.',
+    title: 'Paprika Food Experience',
+    category: 'food',
+    image: PAPRIKA_IMAGES.salmon,
+    caption:
+      'A refined seafood presentation featured through Paprika’s official website.',
     aspect: 'wide'
   },
+
   {
     id: 'gal-buffet',
-    title: 'Original Buffet Dining Hall',
-    category: 'interior',
-    image: '/paprika-buffet-hall.jpg',
-    caption: 'The authentic Paprika buffet hall in Rahim Yar Khan featuring signature caramel tufted leather chairs, cyan-glass tables, and gourmet chafing banquets.',
+    title: 'Seafood Selection',
+    category: 'food',
+    image: PAPRIKA_IMAGES.prawns,
+    caption:
+      'Premium seafood presentation for the Paprika dining experience.',
     aspect: 'tall'
   },
+
   {
     id: 'gal-facade-night',
-    title: 'Paprika Restaurant & Cafe Night View',
-    category: 'exterior',
-    image: '/paprika-night-facade.jpg',
-    caption: 'Evening view of Paprika Restaurant & Cafe on Sadiq Club Road with glowing red chili pepper emblem, rooftop balcony, and takeaway counter.',
+    title: 'Premium Dining Atmosphere',
+    category: 'dining',
+    image: PAPRIKA_IMAGES.lobster,
+    caption:
+      'A cinematic food presentation for the restaurant experience.',
     aspect: 'tall'
   },
+
   {
     id: 'gal-2',
-    title: 'Original Paprika Interior Dining Hall',
-    category: 'interior',
-    image: '/paprika-interior-1.jpg',
-    caption: 'Official interior of Paprika Restaurant in Rahim Yar Khan, featuring warm ambient golden illumination, handcrafted banquet seating, and family fine-dining elegance.',
+    title: 'Signature Seafood',
+    category: 'food',
+    image: PAPRIKA_IMAGES.fish,
+    caption:
+      'Fresh seafood presented with herbs and vibrant seasonal garnish.',
     aspect: 'tall'
   },
+
   {
     id: 'gal-3',
-    title: 'Executive Dining Suite',
+    title: 'Grilled Signature',
     category: 'dining',
-    image: '/paprika-dining-1.jpg',
-    caption: 'Private banquette seating designed for intimate family gatherings, corporate banquets, and celebratory feasts.',
+    image: PAPRIKA_IMAGES.steak,
+    caption:
+      'A rich grilled presentation designed for the premium dining section.',
     aspect: 'square'
   },
+
   {
     id: 'gal-4',
-    title: 'Panoramic Hospitality Lounge',
-    category: 'interior',
-    image: '/paprika-dining-2.jpg',
-    caption: 'Expansive social dining area combining contemporary minimalism with warm Eastern hospitality.',
+    title: 'Italian Kitchen',
+    category: 'food',
+    image: PAPRIKA_IMAGES.pasta,
+    caption:
+      'Italian-inspired pasta presentation with rich Mediterranean flavours.',
     aspect: 'wide'
   },
+
   {
     id: 'gal-5',
-    title: 'Charred Charcoal Barbecue',
+    title: 'Fresh Fish Tacos',
     category: 'food',
-    image: '/gallery-1.jpg',
-    caption: 'Master pitmasters crafting authentic charcoal-grilled skewers with heritage spices.',
+    image: PAPRIKA_IMAGES.tacos,
+    caption:
+      'Colourful fish tacos with fresh vegetables and herbs.',
     aspect: 'square'
   },
+
   {
     id: 'gal-6',
-    title: 'Artisan Culinary Plating',
+    title: 'Dessert Collection',
     category: 'food',
-    image: '/gallery-2.jpg',
-    caption: 'Precision culinary craftsmanship where each dish is plated as an edible work of art.',
+    image: PAPRIKA_IMAGES.cupcakes,
+    caption:
+      'Elegant dessert presentation for the final course.',
     aspect: 'tall'
   },
+
   {
     id: 'gal-7',
-    title: 'Evening Atmosphere & Lighting',
+    title: 'Chocolate Experience',
     category: 'dining',
-    image: '/gallery-3.jpg',
-    caption: 'Subtle ambient lighting casts a golden glow across crystal glassware and crisp linens.',
+    image: PAPRIKA_IMAGES.chocolate,
+    caption:
+      'Rich chocolate presentation for a warm evening dining mood.',
     aspect: 'square'
   },
+
   {
     id: 'gal-8',
-    title: 'Executive Chef Craftsmanship',
+    title: 'Coffee & Conversation',
     category: 'dining',
-    image: '/gallery-4.jpg',
-    caption: 'Behind the pass: our culinary artisans meticulously balancing flavors, textures, and temperature.',
+    image: PAPRIKA_IMAGES.coffee,
+    caption:
+      'A refined coffee moment to complete the Paprika experience.',
     aspect: 'wide'
   }
 ];
 
+
+// ============================================================
+// EXPERIENCE STORY
+// ============================================================
+
 export const EXPERIENCE_STORY = [
+
   {
     title: 'A New Epoch in Rahim Yar Khan Dining',
-    lead: 'Where timeless Pakistani hospitality meets contemporary architectural refinement.',
-    body: 'Paprika Restaurant was envisioned as a sanctuary for those who appreciate both culinary precision and atmospheric grace. Located in the heart of Businessman Colony along Sadiq Club Road, our halls are crafted with acoustic care, layered warm illumination, and crystal-clear hospitality.',
-    image: '/paprika-interior-1.jpg',
-    tag: 'ARCHITECTURE'
+
+    lead:
+      'Where timeless Pakistani hospitality meets contemporary culinary refinement.',
+
+    body:
+      'Paprika Restaurant is located at 42 Businessman Colony in Rahim Yar Khan and presents itself as a family fine-dining restaurant.',
+
+    image: PAPRIKA_IMAGES.salmon,
+
+    tag: 'THE EXPERIENCE'
   },
+
   {
-    title: 'The Art of Fire & Charcoal',
-    lead: 'Authentic Punjabi barbecue infused with Continental panache.',
-    body: 'Every kebab, steak, and grill at Paprika begins with seasoned fruitwood and hardwood charcoal embers. We honor regional grilling traditions while introducing modern sous-vide and cast-iron techniques to deliver unrivaled tenderness.',
-    image: '/dish-7.jpg',
+    title: 'The Art of Seafood & Grill',
+
+    lead:
+      'From salmon and prawns to rich grilled selections.',
+
+    body:
+      'Paprika’s official website highlights seafood selections including Salmon Fry and Prawns Fry alongside a broader food menu.',
+
+    image: PAPRIKA_IMAGES.prawns,
+
     tag: 'THE KITCHEN'
   },
+
   {
     title: 'Crafted Hospitality & Moments',
-    lead: 'A dedication to your celebrations, family feasts, and executive dinners.',
-    body: 'From private banquettes to expansive family dining halls, our team curates each visit with discrete yet attentive service. We believe great food is only half the experience—the rest is how you feel while savoring it.',
-    image: '/paprika-dining-1.jpg',
+
+    lead:
+      'A place for family dining, celebrations and memorable meals.',
+
+    body:
+      'The restaurant describes itself as a family fine-dining destination in Rahim Yar Khan, with booking available through its listed phone numbers.',
+
+    image: PAPRIKA_IMAGES.steak,
+
     tag: 'HOSPITALITY'
   }
 ];
